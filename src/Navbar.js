@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, IconButton, Typography, Switch, InputBase } from '@material-ui/core';
 import SearchIcon from "@material-ui/icons/Search";
 
