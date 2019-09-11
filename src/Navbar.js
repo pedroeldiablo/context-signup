@@ -2,21 +2,25 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, IconButton, Typography, Switch, InputBase } from '@material-ui/core';
 import SearchIcon from "@material-ui/icons/Search";
+import { ThemeContext } from "./contexts/ThemeContext";
 
 import styles from './styles/NavBarStyles';
 
 
 class Navbar extends Component {
+    static contextType = ThemeContext;
+ 
     constructor(props) {
         super(props);
 
     }
 
     render() {
+        const { isDarkMode } = this.context;
         const { classes } = this.props;
         return (
-            <div clasName={classes.root}>
-                <AppBar position="static" color="primary">
+            <div className={classes.root}>
+                <AppBar position="static" color={isDarkMode ? "default" : "primary"}>
                     <Toolbar>
                         <IconButton className={classes.menuButton} color="inherit">
                             <span>🇫🇷</span>
